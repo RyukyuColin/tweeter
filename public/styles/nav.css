@@ -1,8 +1,10 @@
 #nav-bar {
     position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
     padding: 0em 2em;
     height: 80px;
-    width: -webkit-fill-available;
     background-color: #00a087;
     color: #e8fdff;
 }

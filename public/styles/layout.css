@@ -25,10 +25,11 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- body .container {
+ .container {
   width: 450px;
-  position: relative;
+  display: -webkit-box;
   top: 140px;
-  margin: auto;
+  margin: 0px auto;
+  padding-top: 125px;
   background: #fff;
  }
