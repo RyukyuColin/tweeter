@@ -4,7 +4,6 @@ $(document).ready(function() {
   var textLimit = 140;
 
   textArea.addEventListener('keyup', function(event) {
-    //console.log(textLimit - $(this).val().length);
     var spanCounter = $(this).parent().find('.counter');
     var spanCounterLength = $(this).val().length;
     $(spanCounter).text(textLimit - spanCounterLength);
