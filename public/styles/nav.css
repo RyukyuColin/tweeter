@@ -1,12 +1,13 @@
 #nav-bar {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    padding: 0em 2em;
-    height: 80px;
-    background-color: #00a087;
-    color: #e8fdff;
+  background-color: #00a087;
+  color: #e8fdff;
+  height: 80px;
+  left: 0px;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  padding: 0em 2em;
+  z-index: 1;
 }
 
 #nav-bar .logo {
@@ -17,7 +18,7 @@
 
 #nav-bar .header {
   float: left;
-  margin-left: 10px;
   font-size: xx-large;
   line-height: 2.5;
+  margin-left: 10px;
 }
