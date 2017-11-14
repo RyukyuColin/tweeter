@@ -1,11 +1,18 @@
 $(document).ready(function() {
-  var textarea = document.querySelector('.new-tweet textarea');
+  var textArea = document.querySelector('.new-tweet textarea');
+  var spanText = document.getElementsByClassName('counter')
   var textLimit = 140;
 
-  textarea.addEventListener('keyup', function(event) {
+  textArea.addEventListener('keyup', function(event) {
     //console.log(textLimit - $(this).val().length);
     var spanCounter = $(this).parent().find('.counter');
-    $(spanCounter).text(textLimit - $(this).val().length);
-  });
+    var spanCounterLength = $(this).val().length;
+    $(spanCounter).text(textLimit - spanCounterLength);
 
+    if(spanCounterLength >= 140) {
+      $(spanText).addClass('limit-reached');
+    } else {
+      $(spanText).removeClass('limit-reached');
+    }
+  });
 });

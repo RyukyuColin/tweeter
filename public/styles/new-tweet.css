@@ -29,3 +29,7 @@
   resize: vertical;
   width: 100%;
 }
+
+.limit-reached {
+  color: red;
+}
