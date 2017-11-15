@@ -3,6 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+ var faviIcons = '<i class="fa fa-flag"></i><i class="fa fa-retweet"></i><i class="fa fa-heart"></i>';
 
  var data = [
   {
@@ -64,7 +65,7 @@ function createTweetElement(tweetData) {
     newTweet.append($('<footer class="clearfix">'));
     var footer = newTweet.children('footer');
     footer.append($('<div class="time">').text(tweetData.created_at));
-    footer.append($('<div class="icons">'));
+    footer.append($('<div class="icons">').append(faviIcons));
 
    return newTweet;
 }
