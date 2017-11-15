@@ -36,11 +36,19 @@
 
 #created-tweet {
   background: #fff;
-  border: 1px solid #bbb;
-  border-radius: 5px;
-  height: 200px;
   margin: 1em 2em 2em 2em;
  }
+
+#created-tweet article {
+  padding-bottom: 5px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.clearfix {
+  overflow: auto;
+}
 
 #created-tweet header {
   display: flex;
@@ -66,8 +74,7 @@
 }
 
 #created-tweet .written-tweet {
-  padding: 30px 0px 0px 20px;
-  height: 100px;
+  padding: 30px 0px 20px 20px;
 }
 
 #created-tweet footer {
@@ -102,4 +109,4 @@
 
 #created-tweet .icons:hover, #created-tweet .icons.hovered{
   opacity: 1;
-}
+}*/
