@@ -52,22 +52,27 @@
   }
 ];
 
+function changeTime(ms) {
+  return days = Math.floor((Date.now() - ms) / (1000*60*60*24));
+}
+
 function createTweetElement(tweetData) {
-    var newTweet = $('<article>').append($('<header>'));
+  var newTweet = $('<article>').append($('<header>'));
+  var time = `${changeTime(tweetData.created_at)} days ago`;
 
-    var header = newTweet.children('header');
-    header.append($('<img />', { src: tweetData.user.avatars.small, class: 'tweet-image', alt: 'MyAlt' }));
-    header.append($('<div class="tweet-name">').text(tweetData.user.name));
-    header.append($('<div class="tweet-id">').text(tweetData.user.handle));
+  var header = newTweet.children('header');
+  header.append($('<img />', { src: tweetData.user.avatars.small, class: 'tweet-image', alt: 'MyAlt' }));
+  header.append($('<div class="tweet-name">').text(tweetData.user.name));
+  header.append($('<div class="tweet-id">').text(tweetData.user.handle));
 
-    newTweet.append($('<div class="written-tweet">').text(tweetData.content.text));
+  newTweet.append($('<div class="written-tweet">').text(tweetData.content.text));
 
-    newTweet.append($('<footer class="clearfix">'));
-    var footer = newTweet.children('footer');
-    footer.append($('<div class="time">').text(tweetData.created_at));
-    footer.append($('<div class="icons">').append(faviIcons));
+  newTweet.append($('<footer class="clearfix">'));
+  var footer = newTweet.children('footer');
+  footer.append($('<div class="time">').text(time));
+  footer.append($('<div class="icons">').append(faviIcons));
 
-   return newTweet;
+  return newTweet;
 }
 
 function renderTweets(tweets) {
