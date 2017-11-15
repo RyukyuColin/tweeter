@@ -42,31 +42,57 @@ $(document).ready(function() {
   function loadTweets() {
     $.getJSON('/tweets')
       .done((tweet) => {
-        console.log(tweet);
+        console.log(tweet[0].content.text);
         renderTweets(tweet);
       })
   }
   loadTweets();
 
-  // $('form').submit(function(event) {
-  //   event.preventDefault();
-  //   var formData = $('.tweet-form').serialize();
+  function tweetValidation(data) {
+    var submitText = $('#tweet-form').val();
+    var errorDiv = $('<div>').addClass('error');
 
-  //     console.log("form data", formData);
-  //     console.log('Button clicked, performing ajax call...');
-  //     $.ajax({
-  //       type     : 'POST',
-  //       url      : '/tweet',
-  //       data     : formData,
-  //       dataType : 'json',
-  //       encode   : true
-  //     })
-  //       .done(function(data) {
-  //         renderTweets(tweet);
-  //         console.log(data);
-  //       });
-  //   });
-  });
+    $('div.error').remove();
+
+    if(!submitText) {
+      $('#created-tweet').prepend($(errorDiv));
+      errorDiv.text('Please enter a tweet.')
+    }
+    if(submitText.length > 140) {
+      $('#created-tweet').prepend($(errorDiv));
+      errorDiv.text('Please keep tweet length to 140 characters.')
+      //console.log(text.length);
+    }
+  }
+  // tweetValidation();
+
+  function tweetSubmit() {
+  $('.button').on('click', function(event) {
+    event.preventDefault();
+    var formData = $('#tweet-form').serialize();
+
+    tweetValidation(formData);
+
+
+
+
+      // console.log("form data", formData.length);
+      // console.log('Button clicked, performing ajax call...');
+      $.ajax({
+        type     : 'POST',
+        url      : 'tweets',
+        data     : formData
+      })
+        .done(function(data) {
+          $('#created-tweet').append(data);
+          console.log("data", data);
+        });
+    });
+
+}
+tweetSubmit();
+});
+
 
 
 

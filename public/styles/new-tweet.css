@@ -106,6 +106,17 @@
   border-radius: 8px;
 }
 
+.error {
+  padding: 12px;
+  color: #9F6000;
+  background-color: #FEEFB3;
+  margin: 10px 22px;
+  font-size: 2em;
+  text-align: center;
+  border: 1px solid brown;
+  border-radius: 20px;
+}
+
 #created-tweet article:hover header {
   opacity: 1;
 }
