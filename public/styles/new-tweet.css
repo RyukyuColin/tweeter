@@ -103,10 +103,10 @@
   border-radius: 8px;
 }
 
-#created-tweet header:hover, #created-tweet header.hovered {
+#created-tweet article:hover header {
   opacity: 1;
 }
 
-#created-tweet .icons:hover, #created-tweet .icons.hovered{
+#created-tweet article:hover .icons {
   opacity: 1;
-}*/
+}
