@@ -29,6 +29,10 @@
   width: 100%;
 }
 
+.new-tweet .button {
+  border-radius: 50px;
+}
+
 .limit-reached {
   color: red;
 }
@@ -107,14 +111,15 @@
 }
 
 .error {
-    padding: 12px;
-    color: #fe1d1d;
-    background-color: #fecd45;
-    margin: 10px 22px;
-    font-size: 2em;
-    text-align: center;
-    border: 1px solid #fe1d1d;
-    border-radius: 5px;
+  padding: 12px;
+  color: #fe1d1d;
+  margin: 30px 22px;
+  font-size: 1em;
+  background: lightpink;
+  text-align: center;
+  border: 2px dashed #fe1d1d;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 #created-tweet article:hover header {

@@ -74,11 +74,13 @@ $(document).ready(function() {
     if(!submitText) {
       $('#created-tweet').prepend($(errorDiv));
       errorDiv.text('Please enter a tweet.');
+      errorDiv.fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
       return true;
     }
     if(submitText.length > 140) {
       $('#created-tweet').prepend($(errorDiv));
-      errorDiv.text('Please keep tweet length to 140 characters.');
+      errorDiv.text('Please keep tweet length under 140 characters.');
+      errorDiv.fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
       return true;
     }
   }
