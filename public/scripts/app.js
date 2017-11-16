@@ -47,6 +47,8 @@ function toggleTextarea() {
 }
 
 function renderTweets(tweets) {
+  $('#created-tweet').empty();
+
   for(var tweet in tweets) {
     var createdTweet = createTweetElement(tweets[tweet]);
     $('#created-tweet').prepend(createdTweet);
@@ -55,8 +57,6 @@ function renderTweets(tweets) {
 }
 
 $(document).ready(function() {
-  //var tweet = renderTweets(data);
-
   function loadTweets() {
     $.getJSON('/tweets')
       .done((tweet) => {
