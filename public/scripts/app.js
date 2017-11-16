@@ -6,12 +6,18 @@
  var faviIcons = '<i class="fa fa-flag"></i><i class="fa fa-retweet"></i><i class="fa fa-heart"></i>';
 
 function changeTime(ms) {
-  return days = Math.floor((Date.now() - ms) / (1000*60*60*24));
+  days = Math.floor((Date.now() - ms) / (1000*60*60*24));
+
+  if(days < 1) {
+    return "today";
+  } else {
+    return `${days} days ago`;
+  }
 }
 
 function createTweetElement(tweetData) {
   var newTweet = $('<article>').append($('<header>'));
-  var time = `${changeTime(tweetData.created_at)} days ago`;
+  var time = changeTime(tweetData.created_at);
 
   var header = newTweet.children('header');
   header.append($('<img />', { src: tweetData.user.avatars.small, class: 'tweet-image', alt: 'MyAlt' }));
@@ -54,7 +60,6 @@ $(document).ready(function() {
   function loadTweets() {
     $.getJSON('/tweets')
       .done((tweet) => {
-        //console.log(tweet[0].content.text);
         renderTweets(tweet);
       })
   }
@@ -95,6 +100,7 @@ $(document).ready(function() {
         .done(function(data) {
           loadTweets(data);
           $('#tweet-form').val('');
+          $('.counter').text('140');
         });
     });
   }
