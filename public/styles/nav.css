@@ -29,17 +29,17 @@
 }
 
 #compose {
-  padding: 20px;
+  padding: 20px 10px;
   border-radius: 5px;
-  background: #E1FDFE;
-  color: teal;
+  background: #e1fdfe;
+  color: #00a087;
   font-size: larger;
   cursor: pointer;
   border: 1px solid #000;
 }
 
 #compose:hover {
-  background: #FCFDFD;
+  background: #fcfdfd;
   color: #000;
   cursor: pointer;
 }
