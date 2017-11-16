@@ -28,6 +28,18 @@ function createTweetElement(tweetData) {
   return newTweet;
 }
 
+function toggleTextarea() {
+  var textForm = $('.new-tweet');
+  var composeButton = $('#compose');
+
+  composeButton.click(function(event) {
+    event.preventDefault;
+    $(textForm).slideToggle( "slow", function() {
+      $('#tweet-form').focus();
+    });
+  });
+}
+
 function renderTweets(tweets) {
   for(var tweet in tweets) {
     var createdTweet = createTweetElement(tweets[tweet]);
@@ -70,7 +82,7 @@ $(document).ready(function() {
     $('.button').on('click', function(event) {
       event.preventDefault();
 
-      if(tweetValidation(formData) === true) {
+      if(tweetValidation(formData)) {
         return;
       }
 
@@ -86,6 +98,7 @@ $(document).ready(function() {
         });
     });
   }
+  toggleTextarea();
   tweetSubmit();
 });
 
