@@ -1,0 +1,153 @@
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  background-color: #eee;
+  color: #244751;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0; }
+
+#nav-bar {
+  background-color: #00a087;
+  color: #e8fdff;
+  height: 80px;
+  left: 0px;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  padding: 0em 2em;
+  z-index: 1; }
+
+.container {
+  background: #fff;
+  height: 100%;
+  margin: 0px auto;
+  padding-top: 125px;
+  top: 140px;
+  width: 450px; }
+
+#nav-bar .logo {
+  float: left;
+  height: 80px;
+  width: 80px; }
+#nav-bar .header {
+  float: left;
+  font-size: xx-large;
+  line-height: 2.5;
+  margin-left: 10px; }
+#nav-bar div {
+  float: right;
+  padding: 8px 10px 0px 0px; }
+#nav-bar #compose {
+  background: #e1fdfe;
+  border: 1px solid #000;
+  border-radius: 5px;
+  color: #00a087;
+  cursor: pointer;
+  font-size: larger;
+  padding: 20px 10px; }
+#nav-bar #compose:hover {
+  background: #fcfdfd;
+  color: #000;
+  cursor: pointer; }
+
+.new-tweet {
+  background: #e9f7ef;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  margin: 1em 2em 2em 2em; }
+
+.new-tweet form {
+  padding: 0px 10px 10px 10px; }
+.new-tweet h2 {
+  border-bottom: 1px solid;
+  margin: 10px 10px 15px 10px; }
+.new-tweet span {
+  float: right;
+  font-size: 90%;
+  margin: 5px 10px 0px 0px; }
+.new-tweet textarea {
+  display: block;
+  height: 70px;
+  margin-bottom: 5px;
+  padding: 5px 0px 0px 5px;
+  resize: vertical;
+  width: 100%; }
+.new-tweet .button {
+  border-radius: 50px; }
+
+.limit-reached {
+  color: red; }
+
+#created-tweet {
+  background: #fff;
+  margin: 1em 2em 2em 2em; }
+
+#created-tweet article {
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  opacity: .85;
+  padding-bottom: 5px; }
+#created-tweet header {
+  background-color: #e9f7ef;
+  height: 65px;
+  opacity: .65;
+  padding: 5px 0px 0px 5px;
+  width: 100%; }
+#created-tweet .tweet-image {
+  float: left;
+  margin-right: 10px; }
+#created-tweet .tweet-name {
+  float: left;
+  font-size: larger;
+  font-weight: bold;
+  margin: 0px;
+  padding-top: 5px; }
+#created-tweet .tweet-id {
+  float: right;
+  padding: 5px 5px 0px 0px; }
+#created-tweet .written-tweet {
+  padding: 30px 0px 20px 20px; }
+#created-tweet footer {
+  border-top: 1px solid lightgray;
+  font-size: smaller;
+  width: 100%;
+  padding: 10px 10px 0px 10px; }
+#created-tweet .time {
+  float: left; }
+#created-tweet .icons {
+  float: right;
+  opacity: 0; }
+#created-tweet i {
+  padding: 3px; }
+#created-tweet img {
+  border-radius: 8px;
+  height: 3em;
+  width: 3em; }
+#created-tweet article:hover {
+  border: 1px solid #566573;
+  opacity: 1; }
+#created-tweet article:hover header {
+  opacity: 1; }
+#created-tweet article:hover .icons {
+  opacity: 1; }
+
+.clearfix {
+  overflow: auto; }
+
+.error {
+  background: lightpink;
+  border: 2px dashed #fe1d1d;
+  border-radius: 5px;
+  color: #fe1d1d;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 30px 22px;
+  text-align: center;
+  padding: 12px; }
+
+/*# sourceMappingURL=main.css.map */

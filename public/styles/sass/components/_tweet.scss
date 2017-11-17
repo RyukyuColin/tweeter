@@ -1,0 +1,99 @@
+#created-tweet {
+  background: #fff;
+  margin: 1em 2em 2em 2em;
+}
+
+#created-tweet {
+  article {
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    opacity: .85;
+    padding-bottom: 5px;
+  }
+
+  header {
+    background-color: #e9f7ef;
+    height: 65px;
+    opacity: .65;
+    padding: 5px 0px 0px 5px;
+    width: 100%;
+  }
+
+  .tweet-image {
+    float: left;
+    margin-right: 10px;
+  }
+
+  .tweet-name {
+    float: left;
+    font-size: larger;
+    font-weight: bold;
+    margin: 0px;
+    padding-top: 5px;
+  }
+
+  .tweet-id {
+    float: right;
+    padding: 5px 5px 0px 0px;
+  }
+
+  .written-tweet {
+    padding: 30px 0px 20px 20px;
+  }
+
+  footer {
+    border-top: 1px solid lightgray;
+    font-size: smaller;
+    width: 100%;
+    padding: 10px 10px 0px 10px;
+  }
+
+  .time {
+    float: left;
+  }
+
+  .icons {
+    float: right;
+    opacity: 0;
+  }
+
+  i {
+    padding: 3px;
+  }
+
+  img {
+    border-radius: 8px;
+    height: 3em;
+    width: 3em;
+  }
+
+  article:hover {
+    border: 1px solid #566573;
+    opacity: 1;
+  }
+
+  article:hover header {
+    opacity: 1;
+  }
+
+  article:hover .icons {
+    opacity: 1;
+  }
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.error {
+  background: lightpink;
+  border: 2px dashed #fe1d1d;
+  border-radius: 5px;
+  color: #fe1d1d;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 30px 22px;
+  text-align: center;
+  padding: 12px;
+}

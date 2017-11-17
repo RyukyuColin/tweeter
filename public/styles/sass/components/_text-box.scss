@@ -1,0 +1,40 @@
+.new-tweet {
+  background: #e9f7ef;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  margin: 1em 2em 2em 2em;
+}
+
+.new-tweet {
+  form {
+    padding: 0px 10px 10px 10px;
+  }
+
+  h2 {
+    border-bottom: 1px solid;
+    margin: 10px 10px 15px 10px;
+  }
+
+  span {
+    float: right;
+    font-size: 90%;
+    margin: 5px 10px 0px 0px;
+  }
+
+  textarea {
+    display: block;
+    height: 70px;
+    margin-bottom: 5px;
+    padding: 5px 0px 0px 5px;
+    resize: vertical;
+    width: 100%;
+  }
+
+  .button {
+    border-radius: 50px;
+  }
+}
+
+.limit-reached {
+  color: red;
+}
