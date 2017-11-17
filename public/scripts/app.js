@@ -57,7 +57,7 @@ $(document).ready(function() {
       var createdTweet = createTweetElement(tweets[tweet]);
       $('#created-tweet').prepend(createdTweet);
     }
-    return createdTweet;
+    return;
   }
 
   function loadTweets() {
@@ -90,10 +90,10 @@ $(document).ready(function() {
   }
 
   function tweetSubmit() {
-    var formData = $('.tweet-text').serialize();
 
     $('.button').on('click', function(event) {
       event.preventDefault();
+      var formData = $('.tweet-text').serialize();
 
       if(tweetValidation(formData)) {
         return;
@@ -116,12 +116,3 @@ $(document).ready(function() {
   tweetSubmit();
 
 });
-
-
-
-
-
-
-
-
-
