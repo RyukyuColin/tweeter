@@ -17,6 +17,7 @@ $(document).ready(function() {
     });
   }
 
+  // Changes the time inside the tweet from milliseconds to readable form.
   function changeTime(ms) {
     var days = Math.floor((Date.now() - ms) / (1000*60*60*24));
 
@@ -29,6 +30,7 @@ $(document).ready(function() {
     }
   }
 
+  // Creates the nodes for new tweets and inserts the corresponding data.
   function createTweetElement(tweetData) {
     var faviIcons = '<i class="fa fa-flag"></i><i class="fa fa-retweet"></i><i class="fa fa-heart"></i>';
 
@@ -64,11 +66,12 @@ $(document).ready(function() {
     $.getJSON('/tweets')
       .done((tweet) => {
         renderTweets(tweet);
-      })
+      });
   }
 
   loadTweets();
 
+  // Validates whether the text area is empty or over 140 characters.
   function tweetValidation(data) {
     var submitText = $('.tweet-text').val();
     var errorDiv = $('<div>').addClass('error');
