@@ -13,8 +13,8 @@ This is a simple project to build upon and practice HTML, CSS, JS, jQuery and AJ
 
 ## Final Product
 
-!["Screenshot of "]()
-!["Screenshot of "]()
+!["Screenshot of "](https://github.com/RyukyuColin/tweeter/blob/master/docs/Screen%20Shot%202017-11-17%20at%2017.46.01.png)
+!["Screenshot of "](https://github.com/RyukyuColin/tweeter/blob/master/docs/Screen%20Shot%202017-11-17%20at%2017.47.25.png)
 
 ## Dependencies
 
